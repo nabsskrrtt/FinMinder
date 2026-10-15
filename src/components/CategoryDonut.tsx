@@ -1,23 +1,12 @@
 import React from 'react';
 import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip } from 'recharts';
-import { Transaction } from '../config';
+import { Transaction, CATEGORY_COLORS } from '../config';
 import { formatRupiah } from '../lib/format';
 import { PieChart as PieIcon } from 'lucide-react';
 
 interface CategoryDonutProps {
   transactions: Transaction[];
 }
-
-const CATEGORY_COLORS: Record<string, string> = {
-  'Makanan & Minuman': '#14B8A6', // teal brand
-  'Transportasi': '#0284C7',      // sky
-  'Tagihan': '#6366F1',           // indigo
-  'Pulsa & Internet': '#8B5CF6',  // purple
-  'Kuliah': '#EC4899',            // pink
-  'Hiburan': '#F59E0B',           // amber
-  'Belanja': '#10B981',           // emerald
-  'Lainnya': '#94A3B8',           // slate
-};
 
 export const CategoryDonut: React.FC<CategoryDonutProps> = ({ transactions }) => {
   const expenseTransactions = transactions.filter((t) => t.kind === 'expense');

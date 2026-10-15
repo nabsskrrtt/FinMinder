@@ -8,6 +8,7 @@ import { ChatInput } from '../components/ChatInput';
 import { BackstagePanel } from '../components/BackstagePanel';
 import { LayoutDashboard, Sparkles, ChevronLeft, Eye, EyeOff } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Footer } from '../components/Footer';
 
 export const Demo: React.FC = () => {
   const messages = useStore((s) => s.messages);
@@ -141,9 +142,7 @@ export const Demo: React.FC = () => {
       )}
 
       {/* Global Informative Footer */}
-      <footer className="py-3 px-4 text-center text-xs text-ink-500 border-t border-ink-200/80 bg-white">
-        FinMinder bersifat informatif, bukan nasihat keuangan.
-      </footer>
+      <Footer />
     </div>
   );
 };

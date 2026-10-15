@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { computeRunway } from '../lib/runway';
+import { Footer } from '../components/Footer';
 
 export const Dashboard: React.FC = () => {
   const profile = useStore((s) => s.profile);
@@ -222,9 +223,7 @@ export const Dashboard: React.FC = () => {
       </main>
 
       {/* Global Informative Footer */}
-      <footer className="py-4 px-6 text-center text-xs text-ink-500 border-t border-ink-200/80 bg-white">
-        FinMinder bersifat informatif, bukan nasihat keuangan.
-      </footer>
+      <Footer />
     </div>
   );
 };

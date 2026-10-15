@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import { StatusBadge } from '../components/StatusBadge';
 import { RunwayGauge } from '../components/RunwayGauge';
+import { Footer } from '../components/Footer';
 
 export const Landing: React.FC = () => {
   return (
@@ -297,19 +298,7 @@ export const Landing: React.FC = () => {
         </section>
       </main>
 
-      {/* FOOTER GLOBAL */}
-      <footer className="border-t border-ink-200/80 bg-card py-6 px-4 text-center text-xs text-ink-500 space-y-2 mt-12">
-        <div className="flex items-center justify-center gap-2 font-bold text-ink-800">
-          <img src="/logo.png" alt="FinMinder" className="w-5 h-5 rounded-md object-contain shadow-2xs" />
-          <span>FinMinder • Asisten Finansial Mahasiswa</span>
-        </div>
-        <p className="max-w-md mx-auto text-ink-500 leading-relaxed">
-          FinMinder bersifat informatif, bukan nasihat keuangan.
-        </p>
-        <p className="text-[11px] text-ink-400">
-          Semua data disimulasikan di sisi klien. Tidak ada data pribadi yang dikumpulkan atau dikirim ke pihak eksternal.
-        </p>
-      </footer>
+      <Footer />
     </div>
   );
 };

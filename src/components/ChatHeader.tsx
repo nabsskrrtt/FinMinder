@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cpu, ChevronLeft } from 'lucide-react';
+import { ChevronLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface ChatHeaderProps {
@@ -8,11 +8,7 @@ interface ChatHeaderProps {
   isBackstageOpen?: boolean;
 }
 
-export const ChatHeader: React.FC<ChatHeaderProps> = ({
-  onToggleBackstage,
-  showBackstageToggle = true,
-  isBackstageOpen = false,
-}) => {
+export const ChatHeader: React.FC<ChatHeaderProps> = () => {
   return (
     <header className="bg-brand-700 text-white px-3.5 py-2.5 flex items-center justify-between shadow-sm shrink-0 z-20">
       <div className="flex items-center gap-2.5">
@@ -46,29 +42,8 @@ export const ChatHeader: React.FC<ChatHeaderProps> = ({
           <p className="text-[11px] text-teal-100 font-medium flex items-center gap-1.5 mt-0.5">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block animate-pulse" />
             <span>online</span>
-            <span className="text-brand-300">•</span>
-            <span className="text-brand-200 text-[10px]">asisten mahasiswa</span>
           </p>
         </div>
-      </div>
-
-      <div className="flex items-center gap-2">
-        {/* Tombol Di Balik Layar untuk Mobile / Small Screen */}
-        {showBackstageToggle && (
-          <button
-            onClick={onToggleBackstage}
-            className={`flex items-center gap-1 text-xs px-2.5 py-1.5 rounded-full font-semibold transition-all ${
-              isBackstageOpen
-                ? 'bg-white text-brand-900 shadow-xs'
-                : 'bg-brand-800/80 hover:bg-brand-800 text-teal-100 border border-brand-600/40'
-            }`}
-            title="Buka Panel Di Balik Layar"
-            aria-label="Di Balik Layar"
-          >
-            <Cpu className="w-3.5 h-3.5 text-teal-300" />
-            <span className="text-[11px]">Di Balik Layar</span>
-          </button>
-        )}
       </div>
     </header>
   );

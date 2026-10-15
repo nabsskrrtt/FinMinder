@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useStore } from '../store/useStore';
-import { Transaction, Category, CATEGORIES } from '../config';
+import { Transaction, Category, CATEGORIES, CATEGORY_STYLES } from '../config';
 import { formatRupiah, formatDate } from '../lib/format';
 import {
   Search,
@@ -189,11 +189,20 @@ export const TransactionTable: React.FC = () => {
                             OK
                           </button>
                         </div>
-                      ) : (
-                        <span className="inline-block bg-ink-100 text-ink-700 px-2 py-0.5 rounded-md font-medium text-[11px]">
-                          {tx.category}
-                        </span>
-                      )}
+                      ) : (() => {
+                        const catStyle =
+                          CATEGORY_STYLES[tx.category] || CATEGORY_STYLES['Lainnya'];
+                        return (
+                          <span
+                            className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-semibold text-[11px] border ${catStyle.bg} ${catStyle.text} ${catStyle.border}`}
+                          >
+                            <span
+                              className={`w-1.5 h-1.5 rounded-full shrink-0 ${catStyle.dot}`}
+                            />
+                            {tx.category}
+                          </span>
+                        );
+                      })()}
                     </td>
                     <td
                       className={`py-3 px-3 text-right font-bold tabular-nums whitespace-nowrap ${
@@ -271,11 +280,20 @@ export const TransactionTable: React.FC = () => {
                           OK
                         </button>
                       </div>
-                    ) : (
-                      <span className="bg-ink-100 text-ink-700 px-2 py-0.5 rounded text-[11px] font-medium">
-                        {tx.category}
-                      </span>
-                    )}
+                    ) : (() => {
+                      const catStyle =
+                        CATEGORY_STYLES[tx.category] || CATEGORY_STYLES['Lainnya'];
+                      return (
+                        <span
+                          className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-semibold text-[11px] border ${catStyle.bg} ${catStyle.text} ${catStyle.border}`}
+                        >
+                          <span
+                            className={`w-1.5 h-1.5 rounded-full shrink-0 ${catStyle.dot}`}
+                          />
+                          {tx.category}
+                        </span>
+                      );
+                    })()}
                     <span className="flex items-center gap-1 text-[11px] text-ink-400">
                       {getSourceIcon(tx.source)}
                     </span>
