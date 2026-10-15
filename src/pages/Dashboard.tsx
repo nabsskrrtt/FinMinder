@@ -72,6 +72,7 @@ export const Dashboard: React.FC = () => {
 
             <div>
               <div className="flex items-center gap-2">
+                <img src="/logo.png" alt="FinMinder Logo" className="w-6 h-6 rounded-md object-contain shadow-2xs" />
                 <h1 className="text-lg font-extrabold text-ink-900 tracking-tight">
                   Dashboard Refleksi
                 </h1>

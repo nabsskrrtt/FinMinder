@@ -38,11 +38,12 @@ export const Demo: React.FC = () => {
             <ChevronLeft className="w-4 h-4" />
             <span className="hidden sm:inline">Landing</span>
           </Link>
-          <span className="text-ink-300">|</span>
-          <span className="text-xs font-bold text-ink-900 tracking-tight flex items-center gap-1">
-            <span className="w-2 h-2 rounded-full bg-brand-500" />
-            FinMinder Simulator
-          </span>
+          <div className="flex items-center gap-1.5">
+            <img src="/logo.png" alt="FinMinder Logo" className="w-5 h-5 rounded-md object-contain shadow-2xs" />
+            <span className="text-xs font-bold text-ink-900 tracking-tight">
+              FinMinder Simulator
+            </span>
+          </div>
           <span className="text-[10px] bg-brand-50 text-brand-700 font-bold px-2 py-0.5 rounded-full border border-brand-200">
             Prototipe: data simulasi
           </span>

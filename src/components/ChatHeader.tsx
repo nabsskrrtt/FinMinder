@@ -25,11 +25,13 @@ export const ChatHeader: React.FC<ChatHeaderProps> = ({
           <ChevronLeft className="w-5 h-5" />
         </Link>
 
-        {/* Avatar FM */}
+        {/* Avatar Logo FinMinder */}
         <div className="relative">
-          <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-brand-900 via-brand-600 to-teal-400 flex items-center justify-center font-bold text-sm tracking-wider text-white shadow-inner border border-brand-500/30">
-            FM
-          </div>
+          <img
+            src="/logo.png"
+            alt="FinMinder Logo"
+            className="w-10 h-10 rounded-full object-cover shadow-inner border border-white/30 bg-white"
+          />
           <span className="absolute bottom-0 right-0 w-3 h-3 bg-emerald-400 border-2 border-brand-700 rounded-full" />
         </div>
 

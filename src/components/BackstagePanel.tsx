@@ -82,8 +82,8 @@ export const BackstagePanel: React.FC<BackstagePanelProps> = ({
       {/* Header Panel */}
       <div className="flex items-center justify-between border-b border-ink-100 pb-3">
         <div className="flex items-center gap-2">
-          <div className="p-2 bg-brand-50 text-brand-600 rounded-lg">
-            <Cpu className="w-5 h-5" />
+          <div className="p-1 bg-brand-50 rounded-lg border border-brand-200">
+            <img src="/logo.png" alt="FinMinder Logo" className="w-6 h-6 rounded-md object-contain shadow-2xs" />
           </div>
           <div>
             <div className="flex items-center gap-2">

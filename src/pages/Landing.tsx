@@ -22,13 +22,38 @@ export const Landing: React.FC = () => {
         ✨ <strong>Prototipe: data simulasi</strong> — Dibuat untuk demonstrasi asisten finansial mahasiswa
       </div>
 
+      {/* Top Navbar */}
+      <nav className="bg-white/80 backdrop-blur-md border-b border-ink-100 sticky top-0 z-30 px-4 sm:px-8 py-3">
+        <div className="max-w-5xl mx-auto flex items-center justify-between">
+          <Link to="/" className="flex items-center gap-2.5">
+            <img src="/logo.png" alt="FinMinder" className="w-8 h-8 rounded-xl object-contain shadow-2xs" />
+            <span className="font-extrabold text-base tracking-tight text-ink-900">FinMinder</span>
+          </Link>
+          <div className="flex items-center gap-3">
+            <Link to="/dashboard" className="text-xs font-semibold text-ink-600 hover:text-ink-900 transition-colors">
+              Dashboard
+            </Link>
+            <Link to="/demo" className="text-xs font-bold bg-brand-600 hover:bg-brand-700 text-white px-3.5 py-1.5 rounded-full transition-all shadow-xs">
+              Coba Demo
+            </Link>
+          </div>
+        </div>
+      </nav>
+
       {/* Main Content */}
       <main className="flex-1 max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-16 space-y-20 sm:space-y-28">
         {/* HERO SECTION */}
         <section className="text-center space-y-6 sm:space-y-8 max-w-3xl mx-auto pt-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 border border-brand-200 text-brand-700 text-xs font-bold shadow-2xs">
-            <Sparkles className="w-4 h-4 text-brand-600" />
-            <span>Asisten Keuangan WhatsApp untuk Mahasiswa</span>
+          <div className="flex flex-col items-center gap-3">
+            <img
+              src="/logo.png"
+              alt="FinMinder Logo"
+              className="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl object-contain shadow-card border border-ink-100 animate-in zoom-in-95 duration-200"
+            />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 border border-brand-200 text-brand-700 text-xs font-bold shadow-2xs">
+              <Sparkles className="w-4 h-4 text-brand-600" />
+              <span>Asisten Keuangan WhatsApp untuk Mahasiswa</span>
+            </div>
           </div>
 
           <h1 className="text-4xl sm:text-6xl font-extrabold text-ink-900 tracking-tight leading-[1.15]">
@@ -171,9 +196,11 @@ export const Landing: React.FC = () => {
             {/* Pratinjau Chat */}
             <div className="bg-chatBg p-4 sm:p-6 rounded-card border border-ink-200/80 shadow-soft space-y-3 font-sans">
               <div className="flex items-center gap-2 pb-2 border-b border-ink-200/50">
-                <div className="w-7 h-7 rounded-full bg-brand-600 text-white font-bold text-xs flex items-center justify-center">
-                  FM
-                </div>
+                <img
+                  src="/logo.png"
+                  alt="FinMinder Logo"
+                  className="w-7 h-7 rounded-full object-cover bg-white border border-brand-200 shadow-2xs"
+                />
                 <div>
                   <div className="text-xs font-bold text-ink-900">FinMinder Bot</div>
                   <div className="text-[10px] text-emerald-700 font-semibold flex items-center gap-1">
@@ -272,8 +299,8 @@ export const Landing: React.FC = () => {
 
       {/* FOOTER GLOBAL */}
       <footer className="border-t border-ink-200/80 bg-card py-6 px-4 text-center text-xs text-ink-500 space-y-2 mt-12">
-        <div className="flex items-center justify-center gap-2 font-semibold text-ink-700">
-          <ShieldCheck className="w-4 h-4 text-brand-600" />
+        <div className="flex items-center justify-center gap-2 font-bold text-ink-800">
+          <img src="/logo.png" alt="FinMinder" className="w-5 h-5 rounded-md object-contain shadow-2xs" />
           <span>FinMinder • Asisten Finansial Mahasiswa</span>
         </div>
         <p className="max-w-md mx-auto text-ink-500 leading-relaxed">
